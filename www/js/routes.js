@@ -88,6 +88,11 @@ angular.module('app.routes', [])
     controller: 'aboutUsCtrl'
   })
 
+      .state('createEvent', {
+    url: '/createEvent',
+    templateUrl: 'templates/createEvent.html',
+    controller: 'createEventCtrl'
+  })
 
 $urlRouterProvider.otherwise('/page1/Home')
 
