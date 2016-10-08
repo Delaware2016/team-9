@@ -9,40 +9,40 @@ angular.module('app.routes', [])
         $stateProvider
 
 
-            .state('tabsController.newsFeed', {
-                url: '/newsfeed',
+            .state('tabsController', {
+                url: '/page1',
+                templateUrl: 'templates/tabsController.html',
+                abstract: true
+            })
+
+            .state('tabsController.home', {
+                url: '/home',
                 views: {
                     'tab1': {
-                        templateUrl: 'templates/newsFeed.html',
-                        controller: 'newsFeedCtrl'
+                        templateUrl: 'templates/home.html',
+                        controller: 'homeCtrl'
                     }
                 }
             })
 
-            .state('tabsController.myEvents', {
-                url: '/page3',
+            .state('tabsController.donate', {
+                url: '/donate',
                 views: {
                     'tab2': {
-                        templateUrl: 'templates/myEvents.html',
-                        controller: 'myEventsCtrl'
+                        templateUrl: 'templates/donate.html',
+                        controller: 'donateCtrl'
                     }
                 }
             })
 
             .state('tabsController.myRewards', {
-                url: '/page4',
+                url: '/myRewards',
                 views: {
                     'tab3': {
                         templateUrl: 'templates/myRewards.html',
                         controller: 'myRewardsCtrl'
                     }
                 }
-            })
-
-            .state('tabsController', {
-                url: '/page1',
-                templateUrl: 'templates/tabsController.html',
-                abstract: true
             })
 
             .state('login', {
@@ -61,12 +61,6 @@ angular.module('app.routes', [])
                 url: '/page7',
                 templateUrl: 'templates/interests.html',
                 controller: 'interestsCtrl'
-            })
-
-            .state('donate', {
-                url: '/donate',
-                templateUrl: 'templates/donate.html',
-                controller: 'donateCtrl'
             })
 
         $urlRouterProvider.otherwise('/page1/page4')
