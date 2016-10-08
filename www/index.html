@@ -62,24 +62,26 @@
         <ion-side-menu-content>
             <ion-nav-bar class="bar-stable">
                 <ion-nav-back-button></ion-nav-back-button>
-                <ion-nav-buttons side="right">
-                    <button class="button button-icon button-clear ion-navicon" menu-toggle="right"></button>
+                <ion-nav-buttons side="left">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
                 </ion-nav-buttons>
             </ion-nav-bar>
             <ion-nav-view></ion-nav-view>
         </ion-side-menu-content>
-        <ion-side-menu side="right" id="side-menu21">
+        <ion-side-menu side="left" id="side-menu21">
             <ion-header-bar class="bar-stable">
                 <div class="title">Menu</div>
             </ion-header-bar>
-            <ion-content ng-controller="menuCtrl" padding="false" style="top:0px !important;" class="side-menu-right ">
+            <ion-content ng-controller="menuCtrl" padding="false" style="top:0px !important;" class="side-menu-left ">
                 <div class="spacer" data-componentid="spacer2" style="width: 268px; height: 73px;"></div>
-                <button id="menu-button6" class="button button-positive  button-block" data-componentid="button6">My Profile</button>
-                <button id="menu-button7" class="button button-positive  button-block" data-componentid="button7">Testimonials</button>
+                <a ui-sref="tabsController.home" menu-close="" id="menu-button16" class="button button-positive  button-block" data-componentid="button16">Home</a>
+                <a ui-sref="profile" menu-close="" id="menu-button6" class="button button-positive  button-block" data-componentid="button6">My Profile</a>
+                <a ui-sref="testimonials" menu-close="" id="menu-button7" class="button button-positive  button-block" data-componentid="button7">Testimonials</a>
                 <button id="menu-button8" class="button button-positive  button-block" data-componentid="button8">Create Event</button>
+                <button id="menu-button12" class="button button-positive  button-block" data-componentid="button12">Search</button>
+                <button id="menu-button15" class="button button-positive  button-block" data-componentid="button15">About Us</button>
                 <button id="menu-button9" class="button button-positive  button-block" data-componentid="button9">Contact Us</button>
-                <button id="menu-button12" class="button button-positive  button-block" data-componentid="button12">Tap me!</button>
-                <button id="menu-button13" class="button button-positive  button-block" data-componentid="button13">Tap me!</button>
+                <button id="menu-button13" class="button button-positive  button-block" data-componentid="button13">Sign Out</button>
             </ion-content>
         </ion-side-menu>
     </ion-side-menus>

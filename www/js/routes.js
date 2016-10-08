@@ -1,69 +1,83 @@
 angular.module('app.routes', [])
 
-    .config(function ($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider) {
 
-        // Ionic uses AngularUI Router which uses the concept of states
-        // Learn more here: https://github.com/angular-ui/ui-router
-        // Set up the various states which the app can be in.
-        // Each state's controller can be found in controllers.js
-        $stateProvider
+  // Ionic uses AngularUI Router which uses the concept of states
+  // Learn more here: https://github.com/angular-ui/ui-router
+  // Set up the various states which the app can be in.
+  // Each state's controller can be found in controllers.js
+  $stateProvider
+    
+  
 
+      .state('tabsController.home', {
+    url: '/Home',
+    views: {
+      'tab1': {
+        templateUrl: 'templates/home.html',
+        controller: 'homeCtrl'
+      }
+    }
+  })
 
-            .state('tabsController', {
-                url: '/page1',
-                templateUrl: 'templates/tabsController.html',
-                abstract: true
-            })
+  .state('tabsController.donate', {
+    url: '/donate',
+    views: {
+      'tab2': {
+        templateUrl: 'templates/donate.html',
+        controller: 'donateCtrl'
+      }
+    }
+  })
 
-            .state('tabsController.home', {
-                url: '/home',
-                views: {
-                    'tab1': {
-                        templateUrl: 'templates/home.html',
-                        controller: 'homeCtrl'
-                    }
-                }
-            })
+  .state('tabsController.myRewards', {
+    url: '/rewards',
+    views: {
+      'tab3': {
+        templateUrl: 'templates/myRewards.html',
+        controller: 'myRewardsCtrl'
+      }
+    }
+  })
 
-            .state('tabsController.donate', {
-                url: '/donate',
-                views: {
-                    'tab2': {
-                        templateUrl: 'templates/donate.html',
-                        controller: 'donateCtrl'
-                    }
-                }
-            })
+  .state('tabsController', {
+    url: '/page1',
+    templateUrl: 'templates/tabsController.html',
+    abstract:true
+  })
 
-            .state('tabsController.myRewards', {
-                url: '/myRewards',
-                views: {
-                    'tab3': {
-                        templateUrl: 'templates/myRewards.html',
-                        controller: 'myRewardsCtrl'
-                    }
-                }
-            })
+  .state('login', {
+    url: '/page5',
+    templateUrl: 'templates/login.html',
+    controller: 'loginCtrl'
+  })
 
-            .state('login', {
-                url: '/page5',
-                templateUrl: 'templates/login.html',
-                controller: 'loginCtrl'
-            })
+  .state('signup', {
+    url: '/page6',
+    templateUrl: 'templates/signup.html',
+    controller: 'signupCtrl'
+  })
 
-            .state('signup', {
-                url: '/page6',
-                templateUrl: 'templates/signup.html',
-                controller: 'signupCtrl'
-            })
+  .state('passions', {
+    url: '/page7',
+    templateUrl: 'templates/passions.html',
+    controller: 'passionsCtrl'
+  })
 
-            .state('interests', {
-                url: '/page7',
-                templateUrl: 'templates/interests.html',
-                controller: 'interestsCtrl'
-            })
+  .state('profile', {
+    url: '/page8',
+    templateUrl: 'templates/profile.html',
+    controller: 'profileCtrl'
+  })
 
-        $urlRouterProvider.otherwise('/page1/page4')
+  .state('testimonials', {
+    url: '/page9',
+    templateUrl: 'templates/testimonials.html',
+    controller: 'testimonialsCtrl'
+  })
 
+$urlRouterProvider.otherwise('/page1/rewards')
 
-    });
+  
+
+});
