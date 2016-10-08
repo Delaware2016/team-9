@@ -4,14 +4,19 @@
             <ion-item id="donate-list-item3">Pay What You Want!</ion-item>
         </ion-list>
         <div id="donate-button-bar1" class="button-bar">
-            <button id="donate-button1" style="border-radius:10px 10px 10px 10px;" class="button button-dark  button-block">$25</button>
-            <button id="donate-button2" style="border-radius:10px 10px 10px 10px;" class="button button-dark  button-block">$100</button>
-            <button id="donate-button3" style="border-radius:10px 10px 10px 10px;" class="button button-balanced  button-block">Custom</button>
+            <button id="donate-button1" style="border-radius:10px 10px 10px 10px;"
+                    class="button button-dark  button-block" ng-click="updateAmount(25)">$25</button>
+
+            <button id="donate-button2" style="border-radius:10px 10px 10px 10px;"
+                    class="button button-dark  button-block" ng-click="updateAmount(100)">$100</button>
+
+            <button id="donate-button3" style="border-radius:10px 10px 10px 10px;"
+                    class="button button-balanced  button-block" ng-click="updateAmount(0)">Custom</button>
         </div>
         <form id="donate-form2" class="list">
             <label class="item item-input" id="donate-input1" name="customAmount">
                 <span class="input-label">Amount</span>
-                <input type="number" placeholder="$50">
+                <input type="text" placeholder="$50" value={{donateAmount}}>
             </label>
             <ion-item class="range range-positive" id="donate-range2">UWDE
                 <input type="range" value="25" min="0" max="100" step="1" name="generalDonation">
