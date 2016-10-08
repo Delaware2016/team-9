@@ -76,6 +76,12 @@ angular.module('app.routes', [])
     controller: 'testimonialsCtrl'
   })
 
+  .state('aboutUs', {
+    url: '/aboutus',
+    templateUrl: 'templates/aboutUs.html',
+    controller: 'aboutUsCtrl'
+  })
+
 $urlRouterProvider.otherwise('/page1/rewards')
 
   
